@@ -1,41 +1,43 @@
 // Task 1.
 // Выведите в консоль ваше имя. Напоминаю - в ходе работы, консоль открыта всегда!
-
+console.log('Stas')
 // Task 2.
 // Выведите в консоль номер месяца в котором вы родились. Изучите чем отличается вывод числа и строки.
 
-console.log('просто напишите номер месяца здесь');
+console.log(8);
 
 
 
 // Task 3.
 // Выведите в консоль строку: 'Добро '+'пожаловать '+' на курс'
 
-console.log('пишем тут');
+console.log('Добро ' + 'пожаловать' + ' на курс');
 
 
 // Task 4.
 // С помощью alert выведите число 2019. После срабатывания кода - закомментируйте его, чтобы не мешал для дальнейшей разработки
 
-
+//alert(2019)
 
 // Task 5.
 // С помощью console.log выведите результат операции 2019 - 200. Проверьте результат в консоли.
-
+console.log(2019 - 200)
 
 
 // Task 6.
 // На странице создан div#six. С помощью document.getElementById запишите в div#six текст 'Hello World'.
 
-
+document.getElementById('six').innerHTML = 'Hello World'
 
 // Task 7.
 // На странице создан div#seven. С помощью document.getElementById запишите в данный элемент результат умножения 12 на 12. Умножение можно сделать с помощью знака звездочки ( shift + 8).
 
+document.getElementById('seven').innerHTML = 12 * 12
 
 // Task 8.
 // На странице создан div.out-8. С помощью document.querySelector запишите в данный элемент текст 'task-8'. 
 
+document.querySelector('.out-8').innerHTML = 'task-8';
 
 // Task 9.
 // На странице созданa верстка :
@@ -43,17 +45,18 @@ console.log('пишем тут');
 // Замените с помощью querySelector текст внутри span на 'world'.
 // Т.е. результат должен выглядеть <h2>Hello <span class="out-8">world</span></h2>
 
-
+document.querySelector('span.out-8').innerHTML = 'world'
 
 // Task 10.
 //На странице создан div.out-10. С помощью innerHTML запишите внутрь него следующую строку '<h2>Hi</h2>'.
 
+document.querySelector('.out-10').innerHTML = '<h2>Hi</h2>'
 
 // Task 11.
 // На странице создан div.out-11. Запишите внутрь него строку '123'. Для записи используйте innerHTML. Второй операцией - допишите в div.out-11 строку '456'. Для дозаписи примените +=. Обратите внимание - код уже набран, вам нужно удалить комментарий и изучить принцип работы. 
 
-// document.querySelector('.out-11').innerHTML = '123';
-// document.querySelector('.out-11').innerHTML += '345';
+document.querySelector('.out-11').innerHTML = '123';
+document.querySelector('.out-11').innerHTML += '345';
 
 
 
