@@ -127,7 +127,18 @@ document.querySelector('.b-8').onclick = f8;
 //  В противном случае, вывести 0.
 
 function f9(){
+	const inp = document.querySelector('.i-9').value,
+			out = document.querySelector('.out-9');
 
+	if (inp >= 1 && inp <= 32) {
+		out.textContent = 1;
+	} else if (inp >= 33 && inp <= 43) {
+		out.textContent = 2;
+	} else if (inp >= 44 && inp <= 64) {
+		out.textContent = 3;
+	} else {
+		out.textContent = 0;
+	}
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -136,7 +147,8 @@ document.querySelector('.b-9').onclick = f9;
 // Дан select .s-100. По нажатию кнопки, выведите value выбранного option в .out-10.
 
 function f10(){
-
+	const slcValue = document.querySelector('.s-100').value;
+	document.querySelector('.out-10').textContent = slcValue;
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -145,7 +157,8 @@ document.querySelector('.b-10').onclick = f10;
 // Дан select .s-110. По изменению состояния select (событие onchange) выведите value выбранного option в .out-11.
 
 function f11(){
-
+	const slcValue = document.querySelector('.s-110').value;
+	document.querySelector('.out-11').textContent = slcValue;
 }
 
 document.querySelector('.s-110').onchange = f11;
@@ -156,8 +169,8 @@ document.querySelector('.s-110').onchange = f11;
 let i120 = document.querySelector('.i-120');
 
 function f12(){
-   // let v = i120.value;
-   // document.querySelector('.out-12').innerHTML = (typeof v);
+   let v = i120.value;
+   document.querySelector('.out-12').innerHTML = (typeof v);
 
 }
 
@@ -167,7 +180,8 @@ document.querySelector('.b-12').onclick = f12;
 // Дан input i-130. В отличие от предыдущего задания - input type number. По нажатию кнопки получите значение из input  в переменную, а затем выведите в out-13 typeof полученной переменной. Typeof позволяет определить тип данных. Если вы правильно все сделали - то удивительно, но тип данных будет string! Подумайте почему так?
 
 function f13(){
-
+	const inpValue = document.querySelector('.i-130').value;
+	document.querySelector('.out-13').textContent = (typeof inpValue);
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -177,7 +191,21 @@ document.querySelector('.b-13').onclick = f13;
 // Дан input .i-141 и .i-142, type=number.  Дан select .s-143, который содержит две операции - +, -, *, / . Дана кнопка b-14, при нажатии на которую срабатывает функция f14. Функция выводит в .out-14 результат операций выбранной в 3-м select к числам введенным в первом и втором input. Например выбрано 1 13 +, нужно вывести результат операции 1+13 т.е.  14.
 
 function f14(){
+	const inpValue1 = +document.querySelector('.i-141').value,
+			inpValue2 = +document.querySelector('.i-142').value,
+			slcValue = document.querySelector('.s-143').value,
+			out = document.querySelector('.out-14');
 
+			if (slcValue == '+') {
+				out.textContent = inpValue1 + inpValue2;
+			} else if (slcValue == '-') {
+				out.textContent = inpValue1 - inpValue2;
+			}  else if (slcValue == '/') {
+				out.textContent = inpValue1 / inpValue2;
+			}  else {
+				out.textContent = inpValue1 * inpValue2;
+			} 
+	
 }
 
 document.querySelector('.b-14').onclick = f14;
