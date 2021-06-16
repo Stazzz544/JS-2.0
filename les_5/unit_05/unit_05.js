@@ -5,7 +5,10 @@
 
 
 function t1() {
-
+	let out = document.querySelector('.out-1');
+	for (let i = 1; i < 17; i++) {
+		out.innerHTML += i + '_';
+	}
 }
 
 document.querySelector('.b-1').onclick = t1;
@@ -16,7 +19,12 @@ document.querySelector('.b-1').onclick = t1;
 //Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t2() {
-
+	let out = document.querySelector('.out-2');
+	for (let i = 12; i < 39; i++) {
+		if (i % 2 == 0) {
+			out.innerHTML += i + '_';
+		}
+	}
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -28,7 +36,10 @@ document.querySelector('.b-2').onclick = t2;
 // Разделитель - нижнее подчеркивание. Задача решается с помощью цикла.
 
 function t3() {
-
+	let out = document.querySelector('.out-3');
+	for (let i = 25; i > 6; i--) {
+		out.innerHTML += i + '_';
+	}
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -40,7 +51,10 @@ document.querySelector('.b-3').onclick = t3;
 
 
 function t4() {
-
+	let out = document.querySelector('.out-4');
+	for (let i = 77; i > 32; i -= 3) {
+		out.innerHTML += i + '_';
+	}
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -52,7 +66,14 @@ document.querySelector('.b-4').onclick = t4;
 // от 1 до 17 c шагом 1. Разделитель - знак подчеркивания и звездочка (если число нечетное, и две звездочки если четное). Задача решается с помощью цикла.
 
 function t5() {
-
+	let out = document.querySelector('.out-5');
+	for (let i = 1; i < 18; i++) {
+		if (i % 2 != 0) {
+			out.innerHTML += i + "_*";
+		} else {
+			out.innerHTML += i + "_**";
+		}
+	}
 }
 
 document.querySelector('.b-5').onclick = t5;
@@ -69,7 +90,10 @@ document.querySelector('.b-5').onclick = t5;
 //
 
 function t6() {
-
+	const loop = +document.querySelector('.i-6').value;
+	for (let i = 0; i < loop; i++) {
+		document.querySelector('.out-6').innerHTML += '******<br>'
+	}
 }
 
 document.querySelector('.b-6').onclick = t6;
