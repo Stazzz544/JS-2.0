@@ -258,14 +258,19 @@ document.querySelector('.b-14').onclick = f14;
 let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
-	let inp = +document.querySelector('.i-15').value;
+	let inp = +document.querySelector('.i-15').value,
+		 status = 0;
 	
 	for (let i = 0; i < d15.length; i++) {
 		if (inp === d15[i]) {
-			d15[d15.length] = inp;
+			status++ 
 		}
-		console.log(i);
 	}
+
+	if (status === 0) {
+		d15.push(inp);
+	}
+
 	document.querySelector('.out-15');
    showArr('.out-15', d15);
 }
@@ -283,8 +288,9 @@ let d161 = [5, 6, 7, 8, 9];
 let d162 = [23, 24, 56, 87];
 
 function f16() {
+	d16 = d161.concat(d162);
 
-    showArr('.out-16', d16);
+   showArr('.out-16', d16);
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -301,7 +307,15 @@ let d172 = [1, 2, 3, 4, 5];
 
 function f17() {
 
-    showArr('.out-17', d17);
+	myConcat(d171, d17);
+	myConcat(d172, d17);
+
+	function myConcat (oldArr, newArr) {
+		for (let i = 0; i < oldArr.length; i++) {
+			newArr.push(oldArr[i]);
+		}
+	}
+   showArr('.out-17', d17);
 }
 
 document.querySelector('.b-17').onclick = f17;
@@ -316,7 +330,8 @@ document.querySelector('.b-17').onclick = f17;
 let d18 = ['b', 'c', '45', 'e', 'z', 'y'];
 
 function f18() {
-
+	const inp = document.querySelector('.i-18').value;
+	document.querySelector('.out-18').innerHTML = d18.includes(inp);
 }
 
 document.querySelector('.b-18').onclick = f18;
@@ -332,7 +347,13 @@ let d19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be', 'charged'
 let maxString = '';
 
 function f19() {
+	for (let i = 0; i < d19.length; i++) {
+		if (maxString.length < d19[i].length) {
+			maxString = d19[i];
+		}
+	}
 
+	document.querySelector('.out-19').innerHTML = maxString;
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -346,7 +367,8 @@ document.querySelector('.b-19').onclick = f19;
 let d20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
-
+	newArr = d20.join('');
+	document.querySelector('.out-20').innerHTML = newArr;
 }
 
 document.querySelector('.b-20').onclick = f20;
