@@ -420,7 +420,20 @@ let a19 = {
 }
 
 function f19() {
+	let out = '',
+		inp = document.querySelector('.i-19').value.toLowerCase(),
+		correctInp = '';
 
+	if (inp != '') correctInp = inp[0].toUpperCase()
+
+	for(let i = 1; i < inp.length; i++) correctInp += inp[i];
+
+	for (let key in a19) {
+		for (let i = 0; i < a19[key].length; i++) {
+			if (a19[key][i] === correctInp) out += key;
+		}
+	}
+	document.querySelector('.out-19').innerHTML = out;
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -435,7 +448,15 @@ let a20 = {
 }
 
 function f20() {
-
+	let out = '';
+	for(let key in a20) {
+		for (let i = 0; i < a20[key].length; i++) {
+			for (let j = 0; j < a20[key][i].length; j++) {
+				if (a20[key][i][j] === 2) out += a20[key][i][0] + ' ';
+			}
+		}
+	}
+	document.querySelector('.out-20').innerHTML = out;
 }
 
 document.querySelector('.b-20').onclick = f20
