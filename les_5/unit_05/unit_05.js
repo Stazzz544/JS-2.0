@@ -187,11 +187,11 @@ document.querySelector('.b-9').onclick = t9;
 // Разделитель - знак подчеркивания. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
-	let out = document.querySelector('.out-10');
-	out.innerHTML = "";
+	let out = "";
 	for (let i = 1950; i < 1971; i += 2) {
-		out.innerHTML += i;
+		out += i + '_';
 	}
+	document.querySelector('.out-10').innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = t10;
