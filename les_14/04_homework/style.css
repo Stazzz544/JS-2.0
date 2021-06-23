@@ -95,6 +95,8 @@ h6 {
 #city {
 	margin-top: 10px;
 	font-size: 18px;
+	cursor: pointer;
+	color: rgb(51, 159, 6);
 }
 
 .container {
@@ -102,7 +104,12 @@ margin: 0 auto;
 width: 400px;
 margin-top: 30px;
 padding: 15px;
-border: solid 1px black
+padding-bottom: 30px;
+border: solid 1px black;
+border-radius: 5px;
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;   
 }
 
 .title {
@@ -118,13 +125,12 @@ border: solid 1px black
 }
 .divider {
 	margin: 0 auto;
-	margin-top: 15px;
+	margin-top: 20px;
 	width: 170px;
 	height: 1px;
 	background: #000;
 
 }
-
 
 .flex-container{
 	display: flex;
@@ -140,7 +146,7 @@ border: solid 1px black
 
 .date{
 	font-size: 20px;
-	margin-top: 15px;
+	margin-top: 17px;
 	text-align: center;
 }
 
@@ -150,11 +156,36 @@ border: solid 1px black
 
 .time{
 	font-size: 20px;
-	margin-top: 10px;
+	margin-top: 13px;
 	text-align: center;
 }
 
 .time__out{
 	font-weight: 600;
 	margin-top: 10px;
+}
+
+.temp-flex {
+	display: flex;
+	align-items: flex-end;
+	font-size: 22px;
+	justify-content: space-around;
+}
+
+.temp-text{
+	margin-top: 5px;
+	font-size: 18px;
+}
+.temp-img{
+	max-width: 104px;
+	margin: 0 auto;
+}
+
+.temp-flex__right{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+
+
 }
