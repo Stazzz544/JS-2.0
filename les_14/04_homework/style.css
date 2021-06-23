@@ -88,10 +88,73 @@ h6 {
 }
 
 /*------reset styles end-------*/
+*{
+	font-family: sans-serif;
+}
 
 #city {
-	width: 100px;
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.container {
+margin: 0 auto;
+width: 400px;
+margin-top: 30px;
+padding: 15px;
+border: solid 1px black
+}
+
+.title {
+	font-weight: 500;
+	text-align: center;
+	font-size: 30px;
+}
+
+.subtitle {
+	margin-top: 15px;
+	margin-left: 7px;
+	font-size: 23px;
+}
+.divider {
+	margin: 0 auto;
+	margin-top: 15px;
+	width: 170px;
+	height: 1px;
+	background: #000;
+
+}
+
+
+.flex-container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-container__left{}
+
+.flex-container__right{
+	margin-right: 20px;
+
+}
+
+.date{
 	font-size: 20px;
-	background-color: aqua;
-	
+	margin-top: 15px;
+	text-align: center;
+}
+
+.date span{
+	font-weight: 600;
+}
+
+.time{
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.time__out{
+	font-weight: 600;
+	margin-top: 10px;
 }
