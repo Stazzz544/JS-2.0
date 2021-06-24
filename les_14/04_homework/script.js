@@ -88,8 +88,8 @@ function showWeather(data) {
 	let dateParam = timeNormalize(data.timezone);
 	dateToDisplay(dateParam, date);
 	timeToDisplay(dateParam, time);
-	interval(data)
-	temperatureToDisplay(data, temperature)
+	interval(data);
+	temperatureToDisplay(data, temperature);
 }
 
 
@@ -113,11 +113,11 @@ function temperatureToDisplay (data, block) {
 		 windSpeed = data.wind.speed,
 		 img = data.weather[0].icon;
 		 
-	console.log(deg)
-	console.log(degFeel)
-	console.log(description)
-	console.log(windSpeed)
-	console.log(img)
+	//console.log(deg);
+	//console.log(degFeel);
+	//console.log(description);
+	//console.log(windSpeed);
+	//console.log(img);
 
 	block.innerHTML = `
 	<div class="temp-flex">
@@ -135,7 +135,7 @@ function temperatureToDisplay (data, block) {
 		</div>
 
 	</div>
-	`
+	`;
 }
 
 function dateToDisplay (dateParam, date) {
