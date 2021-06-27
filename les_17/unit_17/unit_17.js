@@ -178,7 +178,15 @@ document.querySelector('.b-9').onclick = () => {
 let a10 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t10() {
-
+	let arr = [];
+	a10.forEach((e) => {
+		if (e < 0) {
+			arr.push(0);
+		} else {
+			arr.push(e);
+		}
+	})
+	return arr
 
 }
 
@@ -192,8 +200,10 @@ document.querySelector('.b-10').onclick = () => {
 let a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t11() {
-
-
+	a11_res = a11.filter(function(item, index) {
+		if (index % 2 === 0) return item >= 0;
+	})
+	return a11_res
 }
 
 document.querySelector('.b-11').onclick = () => {
@@ -207,8 +217,11 @@ let a12 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 // a12 = 8; // на этой переменной можно проверить работает или нет ваша функция.
 
 function t12() {
-
-
+	if (Array.isArray(a12)) {
+		return true
+	} else {
+		return false;
+	}
 }
 
 document.querySelector('.b-12').onclick = () => {
@@ -221,10 +234,8 @@ document.querySelector('.b-12').onclick = () => {
 let a13 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 let a13_num = 9;
 
-
 function t13() {
-
-
+	return a13.includes(a13_num)
 }
 
 document.querySelector('.b-13').onclick = () => {
@@ -239,7 +250,16 @@ let a14_sym = 'e';
 
 
 function t14() {
+	let newArr = a14.map(e => {
+		return e.toLowerCase();
+	});
+	a14_sym = a14_sym.toLowerCase();
 
+	if (newArr.includes(a14_sym)) {
+		return true;
+	} else {
+		return false;
+	}
 
 }
 
@@ -282,10 +302,15 @@ let a15 = [
     },
 ];
 
-
+//ДОДЕЛАТЬ!!!!!!!!!!!!!!!!!!!!
 function t15() {
-
-
+	a15_res = a15.filter(e => {
+		//console.log(e)
+		for(let i = 0; i < e.length; i++) {
+			console.log('e:', e[i]);
+			//console.log('key e:', e[key]);
+		}
+	})
 }
 
 document.querySelector('.b-15').onclick = () => {
