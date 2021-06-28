@@ -302,15 +302,12 @@ let a15 = [
     },
 ];
 
-//ДОДЕЛАТЬ!!!!!!!!!!!!!!!!!!!!
+
 function t15() {
 	a15_res = a15.filter(e => {
-		//console.log(e)
-		for(let i = 0; i < e.length; i++) {
-			console.log('e:', e[i]);
-			//console.log('key e:', e[key]);
-		}
+		return e.pnum.length === 6;
 	})
+	return a15_res
 }
 
 document.querySelector('.b-15').onclick = () => {
