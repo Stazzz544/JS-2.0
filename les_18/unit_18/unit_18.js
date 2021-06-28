@@ -23,6 +23,7 @@ function t2() {
 	a1.forEach(e => {
 		a2_res.push(e / 2);
 	});
+	//console.log(a2_res);
 }
 
 document.querySelector('.b-2').onclick = t2;
@@ -31,8 +32,13 @@ document.querySelector('.b-2').onclick = t2;
 // Task 3 ============================================
 /*  Дан массив a3 = [2, 'hello', 3, 'hi', 4, 'Mazai'] - с помощью forEach переберите массив и создайте новый массив a3_res куда добавьте элементы данного массива являющиеся числом. Запускаться решение должно при вызове функции t3.*/
 
+
 function t3() {
-	a3
+	let a3 = [2, 'hello', 3, 'hi', 4, 'Mazai']
+	a3.forEach(e => {
+		if (typeof(e) === 'number') a3_res.push(e);
+	})
+	//console.log(a3_res);
 }
 
 document.querySelector('.b-3').onclick = t3;
@@ -42,7 +48,11 @@ document.querySelector('.b-3').onclick = t3;
 /*  На странице созданы 3 span.task-4 c атрибутом data. С помощью forEach переберите их и добавьте атрибуты в массив a4_res  Запускаться решение должно при вызове функции t4.*/
 
 function t4() {
-
+	let elements = document.querySelectorAll('.task-4');
+	elements.forEach(function(e) {
+		a4_res.push(e.getAttribute('data'))
+	})
+	//onsole.log(a4_res)
 }
 
 document.querySelector('.b-4').onclick = t4;
@@ -51,8 +61,9 @@ document.querySelector('.b-4').onclick = t4;
 // Task 5 ============================================
 /*  На странице созданы 3 p.task-5 c атрибутом data. С помощью forEach переберите их и добавьте событие клик. Напишите функцию t5, которая будет запускаться при клике и добавлять атрибут data элемента, по которому кликнули в массив a5_res.*/
 
-function t5() {
-
+function t5() { 
+	a5_res.push(this.getAttribute('data'))
+	//console.log(a5_res)
 }
 
 document.querySelectorAll('.task-5').forEach(elem => {
@@ -65,7 +76,9 @@ document.querySelectorAll('.task-5').forEach(elem => {
 /*  Дана строка str6='helloworld' - преобразуйте ее в массив и присвойте a6_res. Выведите на страницу. Запускаться решение должно при вызове функции t6. */
 
 function t6() {
-
+	let str6='helloworld';
+	a6_res = str6.split()
+	document.querySelector('.out-6').textContent = a6_res;
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -75,7 +88,10 @@ document.querySelector('.b-6').onclick = t6;
 /*  Дана строка str7='hello world hi mazai' - преобразуйте ее в массив и разбейте по словам. Причем слова не должны содержать пробелов и присвойте a6_res. выведите на страницу.  Запускаться решение должно при вызове функции t7. */
 
 function t7() {
-
+	let str7='hello world hi mazai';
+	a6_res = str7.split(' ')
+	document.querySelector('.out-7').innerHTML = a6_res;
+	//console.log(a6_res)
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -84,7 +100,9 @@ document.querySelector('.b-7').onclick = t7;
 /*  Дан массив a8 = [1,2,66,77,15] - преобразуйте ее в строку. Разделитель - дефис. Результат присвойте a8_res. Запускаться решение должно при вызове функции t8. */
 
 function t8() {
-
+	let a8 = [1,2,66,77,15];
+	a8_res = a8.join('-');
+	//console.log(a8_res)
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -94,7 +112,10 @@ document.querySelector('.b-8').onclick = t8;
 /*  Дан массив a9 = [[hi, mahai], [test, best]] - преобразуйте его в строку. Разделитель - дефис. Результат присвойте a9_res. Запускаться решение должно при вызове функции t9. Допускается лишний дефис в конце строки!!! */
 
 function t9() {
-
+	let a9 = [['hi', 'mahai'], ['test', 'best']];
+	a9 = a9[0].concat(a9[1])
+	a9_res = a9.join('-');
+	//console.log(a9_res)
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -104,7 +125,11 @@ document.querySelector('.b-9').onclick = t9;
 /*  Дан массив a10 = {name: ivan, age: 15, sex: 1, id: 45} - преобразуйте его в query строку ( так передаются GET параметры). Найдите описание что такое query строка самостоятельно. Разделитель - амперсанд. Результат присвойте a10_res. Запускаться решение должно при вызове функции t10. Допускается лишний амперсанд в конце строки!!! */
 
 function t10() {
-
+	let a10 = {name: 'ivan', age: 15, sex: 1, id: 45}
+	let a10_res = Object.keys(a10)
+	.map(key => `${key}=${a10[key]}`)
+	.join('&');
+	//console.log(a10_res)
 }
 
 document.querySelector('.b-10').onclick = t10;
