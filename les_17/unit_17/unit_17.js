@@ -201,8 +201,11 @@ let a11 = [2, 13, 14, -7, 9, 5, 0, -2, 14];
 
 function t11() {
 	a11_res = a11.filter(function(item, index) {
-		if (index % 2 === 0) return item >= 0;
-	})
+		if (index % 2 === 0 && item === 0) {
+			return item >= 0;
+		} else if (index % 2 === 0) {
+			return item;
+	}})
 	return a11_res
 }
 
