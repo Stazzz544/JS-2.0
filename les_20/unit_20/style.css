@@ -31,12 +31,24 @@ section {
     text-align: center;
 }
 
-.keyboard[data="space"] {
-    width: 112px;
+.keyboard[data1="space"] {
+    width: 300px;
+}
+
+.keyboard[data="alt"] {
+	width: 90px;
+}
+
+.keyboard[data="ctrl"] {
+	width: 110px;
 }
 
 .active {
     background: orange;
+}
+
+.keyboard[data="enter"] {
+	width: 110px;
 }
 
 .hide {

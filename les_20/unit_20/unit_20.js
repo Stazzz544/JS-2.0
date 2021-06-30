@@ -160,7 +160,17 @@ document.querySelector('.i-10').onkeydown = t10;
 */
 
 function t11(event) {
-    console.log(event.key);
+	 //console.log(event);
+	 let buttons = document.querySelectorAll('.keyboard');
+	 buttons.forEach(e => {
+		 let attribute = e.getAttribute('data');
+		 if (e.classList.contains('active')) {
+			 e.classList.remove('active');
+		 }
+		 if (event.key === attribute) {
+			e.classList.add('active');
+		 }
+	 })
 
 }
 
