@@ -124,7 +124,6 @@ function t9(event) {
     console.log(event);
 	 let out = document.querySelector('.out-9');
 	 if (event.code === "ArrowDown") out.innerHTML = (num9 += 1);
-
 }
 let num9 = 0;
 document.querySelector('.i-9').onkeydown = t9;
