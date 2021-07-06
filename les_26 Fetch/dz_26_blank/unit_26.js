@@ -11,7 +11,11 @@ function t1() {
 	fetch(`${url}?${auth}&${action}`, {
 	})
 	.then(response => response.text())
+<<<<<<< HEAD
 	.then(responseText => out.innerHTML = responseText);
+=======
+	.then(response => out.innerHTML = response);   
+>>>>>>> main
 }
 
 // ваше событие здесь!!!
