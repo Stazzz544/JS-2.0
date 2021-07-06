@@ -125,11 +125,30 @@ document.querySelector('.b-3').onclick = t3;
 */
 
 function t4() {
+	const url = 'http://getpost.itgid.info/index2.php',
+	auth = 'auth=DdC33D7d2C2a7',
+	action1 = 'action=7',
+	action2 = 'action=8',
+	year = 'year=1989';
 
+	let responseOne = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action1}`)
+			.then(response => {resolve(response.text());
+		});
+	});
+
+	let responseTwo = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action2}&${year}`)
+			.then(response => {resolve(response.text());
+		});
+	});
+
+	Promise.all([responseOne, responseTwo])
+	.then(response => document.querySelector('.out-4').innerHTML = response);
 }
 
 // ваше событие здесь!!!
-
+document.querySelector('.b-4').onclick = t4;
 // Task 5 ============================================
 /*  
  <p>Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1.</p>
@@ -141,11 +160,28 @@ POST запрос на сайт http://getpost.itgid.info/index2.php. В кач�
 */
 
 function t5() {
+	const url = 'http://getpost.itgid.info/index2.php',
+	auth = 'auth=DdC33D7d2C2a7',
+	action1 = 'action=1',
+	action2 = 'action=2';
 
+	let responseOne = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action1}`, {method: 'POST'})
+			.then(response => {resolve(response.text());
+			});
+	});
+	let responseTwo = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action2}`, {method: 'POST'})
+			.then(response => {resolve(response.text());
+		});
+	});
+
+	Promise.all([responseOne, responseTwo])
+	.then(response => document.querySelector('.out-5').innerHTML = response);
 }
 
 // ваше событие здесь!!!
-
+document.querySelector('.b-5').onclick = t5;
 // Task 6 ============================================
 /* 
  <p> Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3.
@@ -162,12 +198,32 @@ function t5() {
 */
 
 function t6() {
+	const url = 'http://getpost.itgid.info/index2.php',
+	auth = 'auth=DdC33D7d2C2a7',
+	action1 = 'action=3',
+	action2 = 'action=4',
+	num1 = 'num1=1123',
+	num2 = 'num2=2321';
 
+	let resposeOne = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action1}&${num1}&${num2}`, {method: 'POST'})
+			.then(response => {resolve(response.text());
+		});
+	});
+	
+	let responseTwo = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action2}&${num1}&${num2}`, {method: 'POST'})
+			.then(responce => {resolve(responce.text());
+		});
+	});
+
+	Promise.all([resposeOne, responseTwo])
+	.then(response => document.querySelector('.out-6').innerHTML = response);
 }
 
 // ваше событие здесь!!!
 
-
+document.querySelector('.b-6').onclick = t6;
 // Task 7 ============================================
 /*  
  <p> Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5.
@@ -181,11 +237,31 @@ function t6() {
 */
 
 function t7() {
+	const url = 'http://getpost.itgid.info/index2.php',
+	auth = 'auth=DdC33D7d2C2a7',
+	action1 = 'action=5',
+	action2 = 'action=6',
+	num1 = 'num1=1123',
+	num2 = 'num2=2321';
 
+	let responseOne = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action1}`, {method: 'POST'})
+		.then(response => {resolve(response.text());
+		});
+	});
+
+	let responseTwo = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action2}&${num1}&${num2}`, {method: 'POST'})
+		.then(response => {resolve(response.text());
+		});
+	});
+
+	Promise.all([responseOne, responseTwo])
+	.then(response => document.querySelector('.out-7').innerHTML = response);
 }
 
 // ваше событие здесь!!!
-
+document.querySelector('.b-7').onclick = t7;
 // Task 8 ============================================
 /* 
 <p> Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7.
@@ -200,8 +276,29 @@ function t7() {
 */
 
 function t8() {
+	const url = 'http://getpost.itgid.info/index2.php',
+	auth = 'auth=DdC33D7d2C2a7',
+	action1 = 'action=7',
+	action2 = 'action=8',
+	year = 'year=1989';
+
+	let responseOne = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action1}`, {method: 'POST'})
+			.then(response => {resolve(response.text());
+		});
+	});
+
+	let responseTwo = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action2}`, {method: 'POST'})
+		.then(response => {resolve(response.text())
+		});
+	});
+
+	Promise.all([responseOne, responseTwo])
+	.then(response => document.querySelector('.out-8').innerHTML = response)
 
 }
 
 // ваше событие здесь!!!
 
+document.querySelector('.b-8').onclick = t8;
