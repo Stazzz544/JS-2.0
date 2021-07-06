@@ -84,15 +84,36 @@ document.querySelector('.b-2').onclick = t2;
                  */
 
 function t3() {
+	const url = 'http://getpost.itgid.info/index2.php',
+	auth = 'auth=DdC33D7d2C2a7',
+	action1 = 'action=5',
+	action2 = 'action=6',
+	num1 = 'num1=121',
+	num2 = 'num2=211';
 
+	let responseOne = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action1}`)
+			.then(response => {resolve(response.text());
+		});
+	});
+
+	let responseTwo = new Promise((resolve, reject) => {
+		fetch(`${url}?${auth}&${action2}&${num1}&${num2}`)
+			.then(response => {resolve(response.text());
+		});
+	});
+
+	Promise.all([responseOne, responseTwo])
+	.then(response => document.querySelector('.out-3').innerHTML = response);
 }
 
 // ваше событие здесь!!!
 
+document.querySelector('.b-3').onclick = t3;
 
 // Task 4 ============================================
 /*  
- <p> Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7.
+<p> Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7.
 Если все
 сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в
 чате). </p>
