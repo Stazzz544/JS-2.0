@@ -11,7 +11,7 @@ function t1() {
 	fetch(`${url}?${auth}&${action}`, {
 	})
 	.then(response => response.text())
-	.then(response => out.innerHTML = response);
+	.then(response => out.innerHTML = response);   
 }
 
 // ваше событие здесь!!!
